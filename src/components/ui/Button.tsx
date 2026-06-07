@@ -1,44 +1,72 @@
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
+import * as React from "react";
+
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "primary-orange" | "outline-blue" | "primary-blue" | "outline-white";
+const brutalBase =
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap border-[3px] border-black font-bold transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:size-4 [&_svg]:shrink-0";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: ButtonVariant;
-  asChild?: boolean;
-  href?: string;
-}
+const brutalPress =
+  "shadow-[6px_6px_0_0_#000] hover:translate-x-[6px] hover:translate-y-[6px] hover:shadow-none active:translate-x-[6px] active:translate-y-[6px] active:shadow-none";
 
-const variantStyles: Record<ButtonVariant, string> = {
-  "primary-orange": "bg-orange text-white border-2 border-black hover:bg-orange/90",
-  "outline-blue": "bg-transparent text-blue border-2 border-blue hover:bg-blue hover:text-white",
-  "primary-blue": "bg-blue text-white border-2 border-black hover:bg-blue/90",
-  "outline-white": "bg-transparent text-white border-2 border-white hover:bg-white hover:text-black",
-};
+const buttonVariants = cva(brutalBase, {
+  variants: {
+    variant: {
+      orange: cn("bg-[#F58A42] text-black", brutalPress),
+      blue: cn("bg-blue text-white", brutalPress),
+      "outline-blue":
+        "border-[3px] border-blue bg-transparent text-blue shadow-[6px_6px_0_0_#2E5BFF] hover:translate-x-[6px] hover:translate-y-[6px] hover:shadow-none",
+      "outline-white":
+        "border-[3px] border-white bg-transparent text-white shadow-[6px_6px_0_0_#fff] hover:translate-x-[6px] hover:translate-y-[6px] hover:shadow-none",
+    },
+    size: {
+      default: "px-6 py-2.5 text-sm",
+      sm: "px-4 py-2 text-xs",
+      lg: "px-8 py-3 text-base",
+    },
+    radius: {
+      none: "rounded-none",
+      md: "rounded-[10px]",
+      lg: "rounded-2xl",
+      full: "rounded-full",
+    },
+  },
+  defaultVariants: {
+    variant: "orange",
+    size: "default",
+    radius: "none",
+  },
+});
 
-export function Button({
-  variant = "primary-orange",
+type ButtonProps = React.ComponentProps<"button"> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+    href?: string;
+  };
+
+function Button({
   className,
-  children,
+  variant,
+  size,
+  radius,
+  asChild = false,
   href,
   ...props
 }: ButtonProps) {
-  const classes = cn(
-    "inline-flex items-center justify-center px-6 py-3 text-sm font-bold uppercase tracking-wide transition-colors cursor-pointer",
-    variantStyles[variant],
-    className,
-  );
+  const classes = cn(buttonVariants({ variant, size, radius, className }));
 
   if (href) {
     return (
       <a href={href} className={classes}>
-        {children}
+        {props.children}
       </a>
     );
   }
 
-  return (
-    <button className={classes} {...props}>
-      {children}
-    </button>
-  );
+  const Comp = asChild ? Slot : "button";
+
+  return <Comp data-slot="button" className={classes} {...props} />;
 }
+
+export { Button, buttonVariants };

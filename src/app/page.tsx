@@ -12,9 +12,9 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Marquee />
       <main>
         <HeroSection />
+        <Marquee />
         <ServicesSection />
         <PortfolioSection />
         <ProcessSection />
