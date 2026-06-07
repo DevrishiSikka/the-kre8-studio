@@ -12,7 +12,7 @@ export interface Service {
 
 export interface PortfolioItem {
   title: string;
-  category: string;
+  description: string;
   tags: string[];
   featured?: boolean;
 }

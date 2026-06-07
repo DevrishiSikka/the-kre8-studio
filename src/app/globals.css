@@ -147,6 +147,16 @@ body {
   box-shadow: 3px 3px 0 0 var(--color-orange);
 }
 
+.brutal-shadow-orange-lg {
+  box-shadow: 10px 10px 0 0 var(--color-orange);
+}
+
+.portfolio-collage-eight {
+  color: var(--color-orange);
+  -webkit-text-stroke: 3px var(--color-black);
+  paint-order: stroke fill;
+}
+
 .brutal-hover {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
