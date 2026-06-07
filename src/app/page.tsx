@@ -11,10 +11,12 @@ import { CtaBanner } from "@/components/sections/CtaBanner";
 export default function Home() {
   return (
     <>
-      <Header />
-      <main>
+      <div className="flex min-h-dvh flex-col">
+        <Header />
         <HeroSection />
         <Marquee />
+      </div>
+      <main>
         <ServicesSection />
         <PortfolioSection />
         <ProcessSection />

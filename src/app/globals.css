@@ -151,6 +151,18 @@ body {
   box-shadow: 0 0 0 0 var(--color-black);
 }
 
+.hero-with {
+  color: var(--color-blue);
+  filter: drop-shadow(0.075em 0.075em 0 var(--color-orange));
+}
+
+.hero-attitude {
+  color: var(--color-orange);
+  -webkit-text-stroke: 4px var(--color-black);
+  paint-order: stroke fill;
+  filter: drop-shadow(8px 8px 0 var(--color-black));
+}
+
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
