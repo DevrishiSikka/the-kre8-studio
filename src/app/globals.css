@@ -12,6 +12,9 @@
   --color-orange: #f58a42;
   --color-blue: #2e5bff;
   --color-black: #000000;
+  --color-process-yellow: #ffd700;
+  --color-process-pink: #ff4081;
+  --color-process-green: #4caf50;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -53,6 +56,9 @@
   --color-orange: var(--color-orange);
   --color-blue: var(--color-blue);
   --color-black: var(--color-black);
+  --color-process-yellow: var(--color-process-yellow);
+  --color-process-pink: var(--color-process-pink);
+  --color-process-green: var(--color-process-green);
   --font-sans: var(--font-sans);
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -155,6 +161,37 @@ body {
   color: var(--color-orange);
   -webkit-text-stroke: 3px var(--color-black);
   paint-order: stroke fill;
+}
+
+.process-watermark {
+  color: rgba(0, 0, 0, 0.04);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.06);
+  paint-order: stroke fill;
+}
+
+.process-card-number-gray {
+  color: rgba(0, 0, 0, 0.08);
+}
+
+.process-card-number-blue {
+  color: rgba(0, 0, 0, 0.18);
+}
+
+.process-card-number-orange {
+  color: rgba(0, 0, 0, 0.15);
+}
+
+.process-card-number-dark {
+  color: rgba(255, 255, 255, 0.12);
+}
+
+.process-marker-underline {
+  text-decoration: none;
+  background-image: linear-gradient(var(--color-black), var(--color-black));
+  background-size: 100% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 1px;
 }
 
 .brutal-hover {
