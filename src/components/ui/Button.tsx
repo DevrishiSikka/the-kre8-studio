@@ -10,11 +10,15 @@ const brutalBase =
 const brutalPress =
   "shadow-[6px_6px_0_0_#000] hover:translate-x-[6px] hover:translate-y-[6px] hover:shadow-none active:translate-x-[6px] active:translate-y-[6px] active:shadow-none";
 
+const brutalPressOrange =
+  "shadow-[6px_6px_0_0_#F58A42] hover:translate-x-[6px] hover:translate-y-[6px] hover:shadow-none active:translate-x-[6px] active:translate-y-[6px] active:shadow-none";
+
 const buttonVariants = cva(brutalBase, {
   variants: {
     variant: {
       orange: cn("bg-[#F58A42] text-black", brutalPress),
       blue: cn("bg-blue text-white", brutalPress),
+      contact: cn("border-2 bg-black font-black text-white", brutalPressOrange),
       "outline-blue":
         "border-[3px] border-blue bg-transparent text-blue shadow-[6px_6px_0_0_#2E5BFF] hover:translate-x-[6px] hover:translate-y-[6px] hover:shadow-none",
       "outline-white":
@@ -24,6 +28,7 @@ const buttonVariants = cva(brutalBase, {
       default: "px-6 py-2.5 text-sm",
       sm: "px-4 py-2 text-xs",
       lg: "px-8 py-3 text-base",
+      contact: "mb-1.5 w-full px-6 py-4 text-sm sm:py-[1.125rem] sm:text-[15px]",
     },
     radius: {
       none: "rounded-none",
