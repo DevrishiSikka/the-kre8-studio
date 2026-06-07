@@ -18,9 +18,15 @@ export interface PortfolioItem {
 }
 
 export interface ProcessStep {
+  number: string;
   title: string;
   description: string;
-  color: "black" | "blue" | "orange";
+  bg: "white" | "blue" | "orange" | "black";
+  text: "black" | "white";
+  numberTone: "gray" | "blue" | "orange" | "dark";
+  icon: "search" | "bolt" | "pen" | "rocket";
+  rotation: string;
+  offsetY: string;
 }
 
 export interface FooterColumn {
