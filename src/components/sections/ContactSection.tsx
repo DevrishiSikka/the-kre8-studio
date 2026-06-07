@@ -176,46 +176,49 @@ function EpicCallout() {
       className="pointer-events-none absolute -bottom-6 right-0 z-20 hidden sm:block lg:-bottom-10 xl:-bottom-12 xl:right-2"
       aria-hidden="true"
     >
-      <p className="font-hand text-[18px] font-bold leading-none tracking-wide text-white sm:text-[22px] lg:text-2xl">
-        LET&apos;S MAKE IT{" "}
-        <span className="relative inline-block">
-          EPIC.
-          <svg
-            viewBox="0 0 42 6"
-            className="absolute -bottom-0.5 left-0 h-1.5 w-full text-white"
-            aria-hidden="true"
-          >
-            <path
-              d="M1 4c10-1 20 1 30 0s8-1 10 1"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.6"
-              strokeLinecap="round"
-            />
-          </svg>
-        </span>
-      </p>
-      <svg
-        viewBox="0 0 80 50"
-        className="absolute -left-14 top-0 h-12 w-20 text-white"
-        aria-hidden="true"
-      >
-        <path
-          d="M78 42C62 38 48 28 34 18C24 11 14 6 4 4"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-        />
-        <path
-          d="M6 4L4 8L10 6"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
+      <div className="relative">
+        <svg
+          viewBox="0 0 80 72"
+          className="absolute -left-[5.25rem] -top-[4.75rem] h-[4.75rem] w-[5.25rem] text-white"
+          aria-hidden="true"
+        >
+          <path
+            d="M74 66C58 54 42 36 26 14"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.2"
+            strokeLinecap="round"
+          />
+          <path
+            d="M26 14L19 7L28 10"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+
+        <p className="font-hand text-[18px] font-bold leading-none tracking-wide text-white sm:text-[22px] lg:text-2xl">
+          LET&apos;S MAKE IT{" "}
+          <span className="relative inline-block">
+            EPIC.
+            <svg
+              viewBox="0 0 42 6"
+              className="absolute -bottom-0.5 left-0 h-1.5 w-full text-white"
+              aria-hidden="true"
+            >
+              <path
+                d="M1 4c10-1 20 1 30 0s8-1 10 1"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+              />
+            </svg>
+          </span>
+        </p>
+      </div>
     </div>
   );
 }
