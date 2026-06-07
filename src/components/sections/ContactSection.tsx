@@ -12,31 +12,33 @@ const budgetOptions = [
   "$50k+",
 ] as const;
 
+const CONTACT_HEADLINE = "Let's KRE8 Something People Remember.";
+
 function ContactIntroPanel() {
   return (
-    <div className="flex items-stretch bg-cream p-5 sm:p-6 md:p-7 lg:p-8">
-      <div className="relative mr-2 mb-2 flex min-h-[380px] w-full flex-col border-2 border-black bg-cream p-7 shadow-[8px_8px_0_0_var(--color-blue)] sm:min-h-[460px] sm:p-8 md:min-h-[500px] md:p-10 lg:p-12">
-        <div className="relative mb-8 w-fit shrink-0 -rotate-[2deg] sm:mb-10">
+    <div className="hidden min-w-0 md:flex md:items-stretch md:bg-cream md:p-5 lg:p-7 xl:p-8">
+      <div className="relative mr-2 mb-2 flex min-h-[420px] w-full min-w-0 flex-col border-2 border-black bg-cream p-6 shadow-[8px_8px_0_0_var(--color-blue)] md:min-h-[460px] md:p-7 lg:min-h-[500px] lg:p-9 xl:min-h-[520px] xl:p-10 xl:mr-2.5 xl:mb-2.5">
+        <div className="relative mb-6 w-fit shrink-0 -rotate-[2deg] lg:mb-8">
           <div className="absolute left-2 top-2 h-full w-full bg-blue" aria-hidden="true" />
-          <div className="relative border-2 border-black bg-black px-3.5 py-2 text-[9px] font-black uppercase tracking-[0.14em] text-white sm:px-4 sm:py-2.5 sm:text-[10px] sm:tracking-[0.16em]">
+          <div className="relative border-2 border-black bg-black px-3 py-1.5 text-[8px] font-black uppercase tracking-[0.12em] text-white lg:px-3.5 lg:py-2 lg:text-[9px] xl:px-4 xl:py-2.5 xl:text-[10px] xl:tracking-[0.16em]">
             Start A Project
           </div>
         </div>
 
-        <h2 className="max-w-[16ch] text-[clamp(2.5rem,7vw,4.5rem)] font-black uppercase leading-[0.9] tracking-[-0.02em] text-black">
-          Let&apos;s KRE8 Something People Remember.
+        <h2 className="w-full text-balance text-[clamp(2.1rem,4.5vw,3rem)] font-black uppercase leading-[0.92] tracking-[-0.02em] text-black lg:text-[clamp(2.4rem,5vw,3.75rem)] xl:text-[clamp(2.65rem,5.5vw,4.25rem)] 2xl:text-[clamp(2.85rem,6vw,4.75rem)]">
+          {CONTACT_HEADLINE}
         </h2>
 
-        <p className="mt-6 max-w-md text-sm font-bold leading-relaxed text-black/80 sm:mt-7 sm:text-[15px] sm:leading-7 md:max-w-sm md:text-base md:leading-8">
+        <p className="mt-5 max-w-full text-[13px] font-bold leading-relaxed text-black/80 lg:mt-6 lg:text-sm lg:leading-7 xl:mt-7 xl:max-w-md xl:text-[15px] xl:leading-8 2xl:text-base">
           Send us your idea, brand name, mood, deadline and budget. We&apos;ll
           turn it into a direction, a system and a launch-ready identity.
         </p>
 
-        <div className="mt-auto pt-8 sm:pt-10">
+        <div className="mt-auto pt-6 lg:pt-8 xl:pt-10">
           <Button
             variant="orange"
             href="mailto:hello@thekre8studio.com"
-            className="w-fit max-w-full px-4 text-[10px] uppercase tracking-[0.08em] sm:px-5 sm:text-xs sm:tracking-[0.1em]"
+            className="w-fit max-w-full px-3 text-[9px] uppercase tracking-[0.08em] lg:px-4 lg:text-[10px] xl:px-5 xl:text-xs xl:tracking-[0.1em]"
           >
             hello@thekre8studio.com
           </Button>
@@ -46,10 +48,20 @@ function ContactIntroPanel() {
   );
 }
 
+function ContactMobileHeading() {
+  return (
+    <div className="mb-6 md:hidden">
+      <h2 className="text-balance text-[clamp(1.65rem,7vw,2.35rem)] font-black uppercase leading-[0.92] tracking-[-0.02em] text-white">
+        {CONTACT_HEADLINE}
+      </h2>
+    </div>
+  );
+}
+
 function GoodIdeasSticker() {
   return (
     <div
-      className="pointer-events-none absolute -right-7 -top-8 z-30 h-[108px] w-[108px] rotate-[8deg] sm:-right-8 sm:-top-9 sm:h-[116px] sm:w-[116px]"
+      className="pointer-events-none absolute -right-5 -top-6 z-30 h-[88px] w-[88px] rotate-[8deg] sm:-right-6 sm:-top-7 sm:h-[96px] sm:w-[96px] md:-right-7 md:-top-8 md:h-[108px] md:w-[108px] lg:h-[116px] lg:w-[116px]"
       aria-hidden="true"
     >
       <svg viewBox="0 0 100 100" className="h-full w-full">
@@ -97,7 +109,7 @@ function GoodIdeasSticker() {
 function ResponseStickyNote() {
   return (
     <div
-      className="pointer-events-none absolute left-1/2 top-[46%] z-40 w-[172px] -translate-x-1/2 -rotate-[7deg] sm:w-[186px] md:top-24 md:-translate-x-[54%] lg:top-[5.5rem]"
+      className="pointer-events-none absolute left-1/2 top-24 z-40 hidden w-[172px] -translate-x-[54%] -rotate-[7deg] md:block lg:top-[5.5rem] xl:w-[186px]"
       aria-hidden="true"
     >
       <Image
@@ -145,7 +157,7 @@ function ResponseStickyNote() {
 function ContactAsterisk() {
   return (
     <div
-      className="pointer-events-none absolute -bottom-1 right-2 z-20 flex h-12 w-12 items-center justify-center rounded-full border-2 border-black bg-contact-blue sm:-bottom-2 sm:right-0 sm:h-14 sm:w-14"
+      className="pointer-events-none absolute -bottom-1 right-1 z-20 flex h-10 w-10 items-center justify-center rounded-full border-2 border-black bg-contact-blue sm:right-2 sm:h-11 sm:w-11 md:-bottom-2 md:right-0 md:h-12 md:w-12 lg:h-14 lg:w-14"
       aria-hidden="true"
     >
       <svg viewBox="0 0 24 24" className="h-6 w-6 text-black sm:h-7 sm:w-7">
@@ -161,7 +173,7 @@ function ContactAsterisk() {
 function EpicCallout() {
   return (
     <div
-      className="pointer-events-none absolute -bottom-8 right-0 z-20 sm:-bottom-10 lg:-bottom-12 lg:right-2"
+      className="pointer-events-none absolute -bottom-6 right-0 z-20 hidden sm:block lg:-bottom-10 xl:-bottom-12 xl:right-2"
       aria-hidden="true"
     >
       <p className="font-hand text-[18px] font-bold leading-none tracking-wide text-white sm:text-[22px] lg:text-2xl">
@@ -245,10 +257,12 @@ export function ContactSection() {
 
         <div
           id="contact-form"
-          className="contact-grain relative overflow-visible bg-contact-dark px-5 py-10 sm:px-8 sm:py-12 md:px-7 md:py-10 lg:px-8 lg:py-12"
+          className="contact-grain relative min-w-0 overflow-visible bg-contact-dark px-4 py-8 sm:px-6 sm:py-10 md:col-span-1 md:px-7 md:py-10 lg:px-8 lg:py-12"
         >
+          <ContactMobileHeading />
+
           <div className="relative z-10 mx-auto w-full max-w-[620px] lg:max-w-[680px]">
-            <div className="relative px-3 pb-12 pt-5 sm:px-5 sm:pb-14 sm:pt-6">
+            <div className="relative px-1 pb-10 pt-2 sm:px-3 sm:pb-12 sm:pt-4 md:px-3 md:pb-14 md:pt-6 lg:px-5">
               <div
                 className="pointer-events-none absolute -left-1 top-5 z-0 h-[120px] w-[62px] bg-contact-blue sm:-left-2 sm:top-4 sm:h-[136px] sm:w-[72px]"
                 aria-hidden="true"
@@ -262,10 +276,10 @@ export function ContactSection() {
                 aria-hidden="true"
               />
 
-              <div className="relative z-10 -rotate-[1.5deg]">
-                <div className="relative border-2 border-black bg-contact-paper px-6 py-8 shadow-[8px_8px_0_0_#000] sm:px-8 sm:py-10">
+              <div className="relative z-10 rotate-0 sm:-rotate-[1deg] md:-rotate-[1.5deg]">
+                <div className="relative border-2 border-black bg-contact-paper px-4 py-6 shadow-[6px_6px_0_0_#000] sm:px-6 sm:py-8 sm:shadow-[8px_8px_0_0_#000] md:px-8 md:py-10">
                   <form
-                    className="relative z-10 flex flex-col gap-6 sm:gap-7"
+                    className="relative z-10 flex flex-col gap-5 sm:gap-6 md:gap-7"
                     onSubmit={(event) => event.preventDefault()}
                   >
                     <ContactField id="contact-name" label="Your Name">
@@ -296,7 +310,7 @@ export function ContactSection() {
                         name="project"
                         rows={6}
                         placeholder="Tell us about your project, goals, ideas, or anything we should know..."
-                        className="contact-input min-h-[160px] w-full resize-y"
+                        className="contact-input min-h-[140px] w-full resize-y sm:min-h-[160px]"
                       />
                     </ContactField>
 
@@ -304,7 +318,7 @@ export function ContactSection() {
                       <legend className="text-xs font-black uppercase tracking-[0.08em] text-black sm:text-[13px]">
                         Budget Range (Optional)
                       </legend>
-                      <div className="flex flex-wrap gap-x-5 gap-y-3 sm:gap-x-6">
+                      <div className="flex flex-wrap gap-x-4 gap-y-2.5 sm:gap-x-5 sm:gap-y-3 md:gap-x-6">
                         {budgetOptions.map((option) => {
                           const checked = selectedBudgets.includes(option);
 
