@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { footerColumns, socialLinks } from "@/lib/constants/footer";
 import { cn } from "@/lib/utils";
 
@@ -104,39 +105,33 @@ function FooterAsterisk() {
   );
 }
 
-function FooterTape() {
+function FooterPaperclip({ className }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 72 28"
-      className="pointer-events-none absolute -right-4 -top-3.5 z-10 h-7 w-[4.5rem] -rotate-[6deg]"
-      aria-hidden="true"
-    >
-      <path
-        d="M2 4L6 2L68 6L70 12L66 24L62 26L4 22L2 16Z"
-        fill="#1a1a1a"
-        stroke="rgba(255,255,255,0.15)"
-        strokeWidth="0.5"
-      />
-      <path
-        d="M8 8L64 11"
-        fill="none"
-        stroke="rgba(255,255,255,0.08)"
-        strokeWidth="1"
-      />
-    </svg>
+    <Image
+      src="/paperclip.svg"
+      alt=""
+      width={64}
+      height={64}
+      className={cn(
+        "pointer-events-none absolute z-20 h-14 w-11 brightness-0 invert sm:h-16 sm:w-12",
+        className,
+      )}
+      aria-hidden
+    />
   );
 }
 
 function FooterNewsletterCard() {
   return (
-    <div className="relative z-20 mx-auto w-full max-w-[19rem] lg:mx-0">
-      <div className="relative rotate-[1deg]">
+    <div className="relative z-20 mx-auto w-full max-w-[19rem] overflow-visible lg:mx-0">
+      <div className="relative rotate-[1deg] overflow-visible">
         <div
           className="pointer-events-none absolute inset-0 translate-x-2 translate-y-2 border-2 border-black bg-[#e8e8e8]"
           aria-hidden="true"
         />
-        <div className="relative border-2 border-black bg-[#f2f2f2] p-5 sm:p-6">
-          <FooterTape />
+        <FooterPaperclip className="-left-5 -top-8 -rotate-[14deg] sm:-left-6 sm:-top-9" />
+        <FooterPaperclip className="-right-5 -top-8 rotate-[14deg] scale-x-[-1] sm:-right-6 sm:-top-9" />
+        <div className="relative overflow-visible border-2 border-black bg-[#f2f2f2] p-5 sm:p-6">
           <div className="flex items-center gap-3">
             <FooterAsterisk />
             <h3 className="text-sm font-black uppercase tracking-[0.06em] text-black sm:text-[15px]">
@@ -153,12 +148,12 @@ function FooterNewsletterCard() {
             />
             <div className="relative">
               <div
-                className="pointer-events-none absolute inset-0 translate-x-[3px] translate-y-[3px] border-2 border-black bg-black"
+                className="pointer-events-none absolute inset-0 translate-x-[6px] translate-y-[6px] border-2 border-black bg-contact-blue"
                 aria-hidden="true"
               />
               <button
                 type="button"
-                className="relative inline-flex w-full items-center justify-center gap-2 border-2 border-black bg-contact-orange px-4 py-2.5 text-[11px] font-black uppercase tracking-[0.1em] text-black transition-transform duration-150 hover:translate-x-[2px] hover:translate-y-[2px] sm:text-xs"
+                className="relative inline-flex w-full items-center justify-center gap-2 border-2 border-black bg-contact-orange px-4 py-2.5 text-[11px] font-black uppercase tracking-[0.1em] text-black transition-transform duration-150 hover:translate-x-[6px] hover:translate-y-[6px] sm:text-xs"
               >
                 Subscribe
                 <span aria-hidden="true">→</span>
