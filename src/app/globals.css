@@ -15,6 +15,11 @@
   --color-process-yellow: #ffd700;
   --color-process-pink: #ff4081;
   --color-process-green: #4caf50;
+  --color-contact-paper: #f5f2eb;
+  --color-contact-dark: #121212;
+  --color-contact-blue: #0047ff;
+  --color-contact-orange: #ff5c00;
+  --color-contact-pink: #ff499e;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -61,6 +66,13 @@
   --color-process-green: var(--color-process-green);
   --font-sans: var(--font-sans);
   --font-heading: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-hand: var(--font-hand);
+  --color-contact-paper: var(--color-contact-paper);
+  --color-contact-dark: var(--color-contact-dark);
+  --color-contact-blue: var(--color-contact-blue);
+  --color-contact-orange: var(--color-contact-orange);
+  --color-contact-pink: var(--color-contact-pink);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -185,15 +197,6 @@ body {
   color: rgba(255, 255, 255, 0.12);
 }
 
-.process-marker-underline {
-  text-decoration: none;
-  background-image: linear-gradient(var(--color-black), var(--color-black));
-  background-size: 100% 2px;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  padding-bottom: 1px;
-}
-
 .brutal-hover {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
@@ -206,6 +209,40 @@ body {
 .brutal-hover:active {
   transform: translate(4px, 4px);
   box-shadow: 0 0 0 0 var(--color-black);
+}
+
+.contact-grain {
+  position: relative;
+  isolation: isolate;
+}
+
+.contact-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.22;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+.contact-input {
+  border: 2px solid var(--color-black);
+  background: #fff;
+  padding: 0.8rem 1rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.875rem;
+  color: var(--color-black);
+}
+
+.contact-input::placeholder {
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.contact-input:focus {
+  outline: 2px solid var(--color-contact-blue);
+  outline-offset: 1px;
 }
 
 .hero-with {
