@@ -26,7 +26,7 @@ export function Footer() {
                 ))}
               </ul>
               {column.title === "Work Together" && (
-                <Button variant="primary-orange" href="#contact" className="mt-4">
+                <Button variant="orange" href="#contact" className="mt-4">
                   Start a Project
                 </Button>
               )}
@@ -38,7 +38,7 @@ export function Footer() {
               Stay Inspired
             </h3>
             <Input label="Email" type="email" placeholder="your@email.com" />
-            <Button variant="primary-orange" className="mt-4 w-full">
+            <Button variant="orange" className="mt-4 w-full">
               Subscribe
             </Button>
             <div className="mt-6 flex gap-4">

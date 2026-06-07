@@ -16,7 +16,7 @@ export function ContactSection() {
             Ready to build a brand that stands out? Tell us about your project
             and let&apos;s make something unforgettable.
           </p>
-          <Button variant="primary-orange" href="#contact-form" className="mt-8 w-fit">
+          <Button variant="orange" href="#contact-form" className="mt-8 w-fit">
             Get Started
           </Button>
         </div>
@@ -29,7 +29,7 @@ export function ContactSection() {
             <Input label="Name" placeholder="Your name" />
             <Input label="Email" type="email" placeholder="your@email.com" />
             <Textarea label="Message" placeholder="Tell us about your project..." />
-            <Button variant="primary-orange" type="submit">
+            <Button variant="orange" type="submit">
               Send Query
             </Button>
           </form>

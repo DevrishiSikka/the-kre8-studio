@@ -18,7 +18,7 @@ export function HeroSection() {
             work.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button variant="primary-orange" href="#contact">
+            <Button variant="orange" href="#contact">
               Build My Brand
             </Button>
             <Button variant="outline-blue" href="#work">

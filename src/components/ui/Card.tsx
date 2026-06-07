@@ -9,7 +9,7 @@ export function Card({ children, className }: CardProps) {
   return (
     <div
       className={cn(
-        "border-2 border-black bg-cream p-6 transition-colors hover:border-orange",
+        "border-2 border-black bg-cream/60 p-6 backdrop-blur-sm transition-colors hover:border-orange",
         className,
       )}
     >
