@@ -7,6 +7,7 @@ export interface Service {
   number: string;
   title: string;
   description: string;
+  accent: "blue" | "orange";
 }
 
 export interface PortfolioItem {

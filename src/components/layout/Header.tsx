@@ -11,7 +11,7 @@ export function Header() {
         <nav className="hidden items-center gap-6 lg:flex">
           {navLinks.map((link) => (
             <a
-              key={link.href}
+              key={link.label}
               href={link.href}
               className="text-xs font-bold uppercase tracking-widest text-black transition-colors hover:text-orange"
             >

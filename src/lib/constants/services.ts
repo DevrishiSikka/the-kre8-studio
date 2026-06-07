@@ -5,36 +5,42 @@ export const services: Service[] = [
     number: "01",
     title: "LOGO & BRAND IDENTITY",
     description:
-      "Distinctive marks and visual systems that make your brand impossible to ignore.",
+      "Crafting memorable visual identities that reflect your brand values, build recognition, and create lasting impressions across all platforms.",
+    accent: "blue",
   },
   {
     number: "02",
-    title: "WEB DESIGN & DEVELOPMENT",
+    title: "WEBSITE DESIGN",
     description:
-      "Bold, fast websites that convert visitors into believers.",
+      "Designing modern, responsive, and user-friendly websites that combine creativity, functionality, and seamless digital user experiences.",
+    accent: "orange",
   },
   {
     number: "03",
-    title: "UI/UX DESIGN",
+    title: "SOCIAL MEDIA BRANDING & MANAGEMENT",
     description:
-      "Interfaces that feel intuitive but look unforgettable.",
+      "Creating engaging social media strategies, consistent brand visuals, and impactful content to grow your online presence effectively.",
+    accent: "blue",
   },
   {
     number: "04",
-    title: "BRAND STRATEGY",
+    title: "MAGAZINE DESIGN",
     description:
-      "Positioning and messaging that cuts through the noise.",
+      "Developing visually appealing magazine layouts with creative typography, structured content flow, and premium editorial design aesthetics.",
+    accent: "blue",
   },
   {
     number: "05",
-    title: "MOTION & ANIMATION",
+    title: "APPLICATION DESIGN",
     description:
-      "Movement that adds attitude and brings brands to life.",
+      "Creating intuitive and visually engaging mobile and web application interfaces focused on user experience, usability, and performance.",
+    accent: "orange",
   },
   {
     number: "06",
-    title: "PACKAGING DESIGN",
+    title: "INVITATION DESIGN",
     description:
-      "Shelf-stopping packaging that tells your story at a glance.",
+      "Designing elegant and personalized invitations for events, celebrations, and corporate occasions with unique creative visual concepts.",
+    accent: "blue",
   },
 ];

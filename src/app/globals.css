@@ -129,6 +129,16 @@ body {
   box-shadow: 4px 4px 0 0 var(--color-black);
 }
 
+.brutal-shadow-lg {
+  box-shadow: 8px 8px 0 0 var(--color-black);
+}
+
+.service-number-outline {
+  color: var(--color-cream);
+  -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.4);
+  paint-order: stroke fill;
+}
+
 .brutal-shadow-sm {
   box-shadow: 3px 3px 0 0 var(--color-black);
 }
