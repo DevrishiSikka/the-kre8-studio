@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/Button";
+import { HERO_VIDEO_SRC, resolveVideoSrc } from "@/lib/constants/hero";
 
 function HeroAsterisk({ className }: { className?: string }) {
   return (
@@ -43,7 +44,17 @@ function HeroFrame() {
           aria-hidden="true"
         />
 
-        <div className="absolute inset-[10px] bg-cream" aria-hidden="true" />
+        <div className="absolute inset-[10px] overflow-hidden bg-cream">
+          <video
+            className="h-full w-full object-cover"
+            src={resolveVideoSrc(HERO_VIDEO_SRC)}
+            autoPlay
+            muted
+            loop
+            playsInline
+            aria-label="Studio showcase video"
+          />
+        </div>
 
         <div className="absolute -right-2 top-5 z-20 rotate-[6deg] md:top-7 md:-right-3">
           <div
