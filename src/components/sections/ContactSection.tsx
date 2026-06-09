@@ -6,13 +6,16 @@ import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
 const budgetOptions = [
-  "Under $5k",
-  "$5k - $20k",
-  "$20k - $50k",
-  "$50k+",
+  "Under ₹5k",
+  "₹5k - ₹20k",
+  "₹20k - ₹50k",
+  "₹50k+",
 ] as const;
 
 const CONTACT_HEADLINE = "Let's KRE8 Something People Remember.";
+
+const contactButtonClassName =
+  "w-fit max-w-full px-3 text-[9px] uppercase tracking-[0.08em] lg:px-4 lg:text-[10px] xl:px-5 xl:text-xs xl:tracking-[0.1em]";
 
 function ContactIntroPanel() {
   return (
@@ -33,14 +36,21 @@ function ContactIntroPanel() {
           Send us your idea, brand name, mood, deadline and budget. We&apos;ll
           turn it into a direction, a system and a launch-ready identity.
         </p>
-
-        <div className="mt-auto pt-6 lg:pt-8 xl:pt-10">
+        
+        <div className="mt-auto flex flex-col items-start gap-3 pt-6 lg:gap-3.5 lg:pt-8 xl:pt-10">
           <Button
             variant="orange"
             href="mailto:hello@thekre8studio.com"
-            className="w-fit max-w-full px-3 text-[9px] uppercase tracking-[0.08em] lg:px-4 lg:text-[10px] xl:px-5 xl:text-xs xl:tracking-[0.1em]"
+            className={contactButtonClassName}
           >
             hello@thekre8studio.com
+          </Button>
+          <Button
+            variant="orange"
+            href="tel:+91 6306809928"
+            className={contactButtonClassName}
+          >
+            +91 6306809928
           </Button>
         </div>
       </div>
