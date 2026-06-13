@@ -11,8 +11,8 @@ import { CtaBanner } from "@/components/sections/CtaBanner";
 export default function Home() {
   return (
     <>
+      <Header />
       <div className="flex min-h-dvh flex-col">
-        <Header />
         <HeroSection />
         <Marquee />
       </div>

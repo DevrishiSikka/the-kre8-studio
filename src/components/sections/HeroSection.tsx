@@ -74,7 +74,7 @@ function HeroFrame() {
 
 export function HeroSection() {
   return (
-    <section className="relative flex w-full flex-1 flex-col justify-center overflow-hidden px-6 md:px-10">
+    <section className="relative flex w-full flex-1 flex-col justify-center overflow-hidden px-6 pt-24 md:px-10 md:pt-28">
       <div
         className="pointer-events-none absolute right-[6%] top-[12%] hidden h-56 w-56 rounded-full bg-orange/25 blur-3xl lg:block"
         aria-hidden="true"
