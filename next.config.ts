@@ -4,4 +4,8 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
+module.exports = {
+  allowedDevOrigins: ['192.168.31.208'],
+}
+
 export default nextConfig;

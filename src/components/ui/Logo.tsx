@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
@@ -15,7 +17,7 @@ const sizeStyles = {
 export function Logo({ className, size = "md", variant = "default" }: LogoProps) {
   if (variant === "studio") {
     return (
-      <a
+      <Link
         href="/"
         className={cn(
           "inline-flex items-center gap-2 font-black uppercase tracking-tight",
@@ -30,12 +32,12 @@ export function Logo({ className, size = "md", variant = "default" }: LogoProps)
           </span>
         </span>
         <span className="text-black">KRE8 STUDIO</span>
-      </a>
+      </Link>
     );
   }
 
   return (
-    <a
+    <Link
       href="/"
       className={cn(
         "inline-flex items-center font-black tracking-tight",
@@ -45,6 +47,6 @@ export function Logo({ className, size = "md", variant = "default" }: LogoProps)
     >
       <span className="text-black">KRE</span>
       <span className="text-orange">8</span>
-    </a>
+    </Link>
   );
 }
