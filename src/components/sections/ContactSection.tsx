@@ -40,10 +40,10 @@ function ContactIntroPanel() {
         <div className="mt-auto flex flex-col items-start gap-3 pt-6 lg:gap-3.5 lg:pt-8 xl:pt-10">
           <Button
             variant="orange"
-            href="mailto:hello@thekre8studio.com"
+            href="mailto:Thekre8studio@gmail.com"
             className={contactButtonClassName}
           >
-            hello@thekre8studio.com
+            Thekre8studio@gmail.com
           </Button>
           <Button
             variant="orange"
