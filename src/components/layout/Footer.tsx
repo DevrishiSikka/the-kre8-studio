@@ -1,6 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
+
 import { footerColumns, socialLinks } from "@/lib/constants/footer";
 import { cn } from "@/lib/utils";
+
+import { CopyrightYear } from "./CopyrightYear";
 
 function FooterSparkAccent() {
   return (
@@ -204,13 +208,13 @@ function FooterNavColumn({
 
 function FooterWordmark() {
   return (
-    <a
+    <Link
       href="/"
       className="block w-full select-none font-black uppercase leading-[0.78] tracking-[-0.04em] text-contact-orange text-[clamp(5rem,18vw,13.5rem)]"
       aria-label="KRE8 Studio home"
     >
       KRE8
-    </a>
+    </Link>
   );
 }
 
@@ -274,7 +278,7 @@ export function Footer() {
         <div className="mx-auto max-w-[1400px] px-6 sm:px-8 lg:px-10 xl:px-14">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <p className="font-mono text-[10px] font-normal uppercase tracking-[0.04em] text-white/60 sm:text-[11px]">
-              © {new Date().getFullYear()} KRE8 STUDIO. ALL RIGHTS RESERVED.
+              © <CopyrightYear /> KRE8 STUDIO. ALL RIGHTS RESERVED.
             </p>
             <div className="flex flex-wrap items-center font-mono text-[10px] font-normal uppercase tracking-[0.04em] sm:text-[11px]">
               {socialLinks.map((link, index) => (

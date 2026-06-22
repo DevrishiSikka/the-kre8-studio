@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Caveat, Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import LenisScrollProvider from "./providers/lenis-provider";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -47,7 +48,9 @@ export default function RootLayout({
       )}
     >
       <body className="min-h-full flex flex-col text-black">
-        {children}
+        <LenisScrollProvider>
+          {children}
+        </LenisScrollProvider>
       </body>
     </html>
   );
