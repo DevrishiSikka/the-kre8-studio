@@ -73,7 +73,7 @@ function ProcessCard({ step }: { step: ProcessStep }) {
   return (
     <article
       className={cn(
-        "relative flex min-h-[280px] w-full flex-col border-2 border-black p-5 brutal-shadow-lg sm:min-h-[300px] sm:p-6",
+        "relative flex min-h-[280px] w-full flex-col border-2 border-black p-5 brutal-shadow-lg transition-transform duration-300 ease-out hover:translate-y-0 hover:rotate-0 sm:min-h-[300px] sm:p-6",
         bgMap[step.bg],
         step.rotation,
         step.offsetY,
