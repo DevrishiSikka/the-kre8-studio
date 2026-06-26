@@ -210,10 +210,10 @@ function FooterWordmark() {
   return (
     <Link
       href="/"
-      className="block w-full select-none font-black uppercase leading-[0.78] tracking-[-0.04em] text-contact-orange text-[clamp(5rem,18vw,13.5rem)]"
+      className="block w-full select-none whitespace-nowrap font-black uppercase leading-[0.78] tracking-[-0.04em] text-contact-orange text-[length:calc(100cqw/9.35)]"
       aria-label="KRE8 Studio home"
     >
-      KRE8
+      THE KRE8 STUDIO
     </Link>
   );
 }
@@ -268,8 +268,10 @@ export function Footer() {
 
       {/* Wordmark */}
       <div className="flex flex-1 items-end border-b border-white/20 pt-6 pb-2 sm:pt-8 sm:pb-3 lg:pt-10">
-        <div className="mx-auto w-full max-w-[1400px] overflow-hidden px-6 sm:px-8 lg:px-10 xl:px-14">
-          <FooterWordmark />
+        <div className="mx-auto w-full max-w-[1400px] px-6 sm:px-8 lg:px-10 xl:px-14">
+          <div className="@container w-full">
+            <FooterWordmark />
+          </div>
         </div>
       </div>
 
